@@ -14,8 +14,11 @@ def main():
 
 
 def guess(numero, resposta):
-        if numero != resposta:
-            print("Número errado! Tente novamente")
+        if numero != resposta and numero > resposta:
+            print("Número muito alto! Tente novamente")
+            return False
+        elif numero != resposta and numero < resposta:
+            print("Número muito baixo! Tente novamente")
             return False
         else:
             print(f"Parabéns você acertou, o número era {resposta}")
